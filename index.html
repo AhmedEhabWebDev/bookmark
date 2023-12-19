@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <main class="py-5 position-relative">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <h1 class="py-2 position-relative">Bookmarker</h1>
+      <div class="main-mark w-100 p-3 py-4 mt-5 mb-4 d-flex flex-column justify-content-center align-items-center">
+        <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+        <label class="w-100 pb-2 mt-4" for="siteName"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+        <input class="w-100 mb-4 form-control" id="siteName" type="text" placeholder="Bookmark Name" />
+        <label class="w-100 pb-2" for="siteURL"><i class="fa-solid fa-link"></i> Site URL</label>
+        <input class="w-100 mb-4 form-control" oninput="validSite(this.value)" id="siteURL" type="text" placeholder="Website URL" />
+        <button onclick="addSite()" class="btn-sub btn px-5 py-2">submit</button>
+      </div>
+      <table class="table text-center bg-light">
+        <thead>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
